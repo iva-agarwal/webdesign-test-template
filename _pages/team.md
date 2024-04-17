@@ -99,20 +99,3 @@ permalink: /test/
 
 {% endif %}
 {% endfor %}
-
-
-<script>
-$(document).ready(function() {
-    $('#searchInput').on('keyup', function() {
-        var filter = $(this).val().toLowerCase();
-        $('.person').each(function() {
-            var position = $(this).find('.position').text().toLowerCase();
-            if (position.indexOf(filter) > -1) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
-    });
-});
-</script>
