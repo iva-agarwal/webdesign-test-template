@@ -26,7 +26,7 @@
       function populatePositionList() {
         var positions = [];
         $('.person').each(function() {
-          var position = $(this).find('.position').text().trim();
+        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
           if (!positions.includes(position)) {
             positions.push(position);
             $('#positionList').append('<input type="radio" name="position" value="' + position + '"> ' + position + '<br>');
