@@ -98,3 +98,19 @@ permalink: /test/
 
 {% endif %}
 {% endfor %}
+
+
+<script>
+$(document).ready(function() {
+    $('#searchInput').on('keyup', function() {
+        var filter = $(this).val().toLowerCase();
+        $('.person').each(function() {
+            if ($(this).text().toLowerCase().indexOf(filter) > -1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+});
+</script>
