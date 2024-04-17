@@ -5,8 +5,6 @@
 
   <body>
  <div class="col-sm-3">
-     <input type="text" id="searchInput" placeholder="Search by position...">
-
         <h3>Select Position:</h3>
         <div id="positionList">
           <!-- Radio list will be dynamically generated here -->
@@ -20,25 +18,25 @@
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
-   <script>
+  <script>
   $(document).ready(function() {
-      // Function to populate the radio list with available positions
-     function populatePositionList() {
-    var positions = [];
-    $('.person').each(function() {
-        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-        if (!positions.includes(memberPosition)) {
-            positions.push(memberPosition);
-            $('#positionList').append('<input type="radio" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
-        }
-    });
-}
-
-      // Function to filter members based on the selected position
-      function filterMembersByPosition(position) {
+      // Function to populate the checkbox list with available positions
+      function populatePositionList() {
+        var positions = [];
         $('.person').each(function() {
-        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-          if (memberPosition === position || position === 'All') {
+          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+          if (!positions.includes(memberPosition)) {
+            positions.push(memberPosition);
+            $('#positionList').append('<input type="checkbox" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
+          }
+        });
+      }
+
+      // Function to filter members based on the selected positions
+      function filterMembersByPosition(positions) {
+        $('.person').each(function() {
+          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+          if (positions.includes(memberPosition) || positions.length === 0) {
             $(this).show();
           } else {
             $(this).hide();
@@ -49,25 +47,15 @@
       // Initial population of the position list
       populatePositionList();
 
-      // Event listener for radio button change
-      $('input[type=radio][name=position]').change(function() {
-        var selectedPosition = $(this).val();
-        filterMembersByPosition(selectedPosition);
+      // Event listener for checkbox change
+      $('input[type=checkbox][name=position]').change(function() {
+        var selectedPositions = [];
+        $('input[type=checkbox][name=position]:checked').each(function() {
+          selectedPositions.push($(this).val());
+        });
+        filterMembersByPosition(selectedPositions);
       });
 
-      // Search functionality
-      $('#searchInput').on('keyup', function() {
-        var filter = $(this).val().toLowerCase();
-        $('.person').each(function() {
-          var position = $(this).find('.position').text().toLowerCase();
-          if (position.indexOf(filter) > -1) {
-            $(this).show();
-          } else {
-            $(this).hide();
-          }
-        });
-      });
-    });
 </script>
 
 
