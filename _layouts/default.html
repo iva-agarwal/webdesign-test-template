@@ -37,7 +37,7 @@
       // Function to filter members based on the selected position
       function filterMembersByPosition(position) {
         $('.person').each(function() {
-          var memberPosition = $(this).find('.position').text().trim();
+        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
           if (memberPosition === position || position === 'All') {
             $(this).show();
           } else {
