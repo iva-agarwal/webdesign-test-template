@@ -48,10 +48,10 @@ permalink: /test/
 <div class="row">
 {% endif %}
 
-<div class="col-sm-6 clearfix">
+<div class="col-sm-6 clearfix person">
   <img src="{{ member.image }}" class="img-responsive" width="35%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.position }}, {{ member.affiliation }} <br>email: {{ member.email }}</i>
+  <i class="position">{{ member.position }}, {{ member.affiliation }} <br>email: {{ member.email }}</i>
   <ul style="overflow: hidden">
 
   {% if member.bio1 != "" %}
@@ -69,6 +69,7 @@ permalink: /test/
 
   </ul>
 </div>
+
 
 {% assign number_printed = number_printed | plus: 1 %}
 
