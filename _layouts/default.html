@@ -26,28 +26,30 @@
   <script>
     $(document).ready(function() {
       // Function to populate the checkbox list with available positions
-      function populatePositionList() {
-        var positions = {};
-        $('.person').each(function() {
-          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-          if (!(memberPosition in positions)) {
+     function populatePositionList() {
+    var positions = {};
+    $('.person').each(function() {
+        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+        if (!(memberPosition in positions)) {
             positions[memberPosition] = false;
             $('#positionList').append('<input type="checkbox" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
-          }
-        });
-      }
+        }
+    });
+}
+
 
       // Function to filter members based on the selected positions
       function filterMembersByPosition(positions) {
-        $('.person').each(function() {
-          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-          if (positions[memberPosition] || positions.length === 0) {
+    $('.person').each(function() {
+        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+        if (Object.keys(positions).length === 0 || positions[memberPosition]) {
             $(this).show();
-          } else {
+        } else {
             $(this).hide();
-          }
-        });
-      }
+        }
+    });
+}
+
 
       // Initial population of the position list
       populatePositionList();
