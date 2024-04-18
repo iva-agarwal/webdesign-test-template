@@ -18,45 +18,47 @@
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
- <script>
+<script>
   $(document).ready(function() {
-      // Function to populate the checkbox list with available positions
-      function populatePositionList() {
-        var positions = [];
-        $('.person').each(function() {
-          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-          if (!positions.includes(memberPosition)) {
-            positions.push(memberPosition);
-            $('#positionList').append('<input type="checkbox" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
-          }
-        });
-      }
-
-      // Function to filter members based on the selected positions
-      function filterMembersByPosition(positions) {
-        $('.person').each(function() {
-          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-          if (positions.includes(memberPosition) || positions.length === 0) {
-            $(this).show();
-          } else {
-            $(this).hide();
-          }
-        });
-      }
-
-      // Initial population of the position list
-      populatePositionList();
-
-      // Event listener for checkbox change
-      $('input[type=checkbox][name=position]').change(function() {
-        var selectedPositions = [];
-        $('input[type=checkbox][name=position]:checked').each(function() {
-          selectedPositions.push($(this).val());
-        });
-        filterMembersByPosition(selectedPositions);
+    // Function to populate the checkbox list with available positions
+    function populatePositionList() {
+      var positions = {};
+      $('.person').each(function() {
+        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+        if (!(memberPosition in positions)) {
+          positions[memberPosition] = false;
+          $('#positionList').append('<input type="checkbox" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
+        }
       });
+    }
+
+    // Function to filter members based on the selected positions
+    function filterMembersByPosition(positions) {
+      $('.person').each(function() {
+        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+        if (positions[memberPosition] || positions.length === 0) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+
+    // Initial population of the position list
+    populatePositionList();
+
+    // Event listener for checkbox change
+    $('input[type=checkbox][name=position]').change(function() {
+      var selectedPositions = {};
+      $('input[type=checkbox][name=position]:checked').each(function() {
+        var position = $(this).val();
+        selectedPositions[position] = true;
+      });
+      filterMembersByPosition(selectedPositions);
+    });
   });
 </script>
+
 
 
   </body>
