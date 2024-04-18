@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
- <div class="col-sm-3">
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
         <h3>Select Position:</h3>
-        <div id="positionList">
-          <!-- Radio list will be dynamically generated here -->
+        <div id="positionList" class="text-center">
+          <!-- Checkbox list will be dynamically generated here -->
         </div>
       </div>
-    <div class="container-fluid">
-      <div class="row">
-        {{ content }}
-      </div>
     </div>
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
-<script>
-  $(document).ready(function() {
-    // Function to populate the checkbox list with available positions
-    function populatePositionList() {
-      var positions = {};
-      $('.person').each(function() {
-        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-        if (!(memberPosition in positions)) {
-          positions[memberPosition] = false;
-          $('#positionList').append('<input type="checkbox" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
-        }
-      });
-    }
+  </div>
 
-    // Function to filter members based on the selected positions
-    function filterMembersByPosition(positions) {
-      $('.person').each(function() {
-        var memberPosition = $(this).find('.position').text().trim().split(',')[0];
-        if (positions[memberPosition] || positions.length === 0) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
-    }
+  <div class="container-fluid">
+    <div class="row">
+      {{ content }}
+    </div>
+  </div>
 
-    // Initial population of the position list
-    populatePositionList();
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Function to populate the checkbox list with available positions
+      function populatePositionList() {
+        var positions = {};
+        $('.person').each(function() {
+          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+          if (!(memberPosition in positions)) {
+            positions[memberPosition] = false;
+            $('#positionList').append('<input type="checkbox" name="position" value="' + memberPosition + '"> ' + memberPosition + '<br>');
+          }
+        });
+      }
 
-    // Event listener for checkbox change
-    $('input[type=checkbox][name=position]').change(function() {
-      var selectedPositions = {};
-      $('input[type=checkbox][name=position]:checked').each(function() {
-        var position = $(this).val();
-        selectedPositions[position] = true;
+      // Function to filter members based on the selected positions
+      function filterMembersByPosition(positions) {
+        $('.person').each(function() {
+          var memberPosition = $(this).find('.position').text().trim().split(',')[0];
+          if (positions[memberPosition] || positions.length === 0) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      }
+
+      // Initial population of the position list
+      populatePositionList();
+
+      // Event listener for checkbox change
+      $('input[type=checkbox][name=position]').change(function() {
+        var selectedPositions = {};
+        $('input[type=checkbox][name=position]:checked').each(function() {
+          var position = $(this).val();
+          selectedPositions[position] = true;
+        });
+        filterMembersByPosition(selectedPositions);
       });
-      filterMembersByPosition(selectedPositions);
     });
-  });
-</script>
-
-
-
-  </body>
+  </script>
+</body>
 
 </html>
