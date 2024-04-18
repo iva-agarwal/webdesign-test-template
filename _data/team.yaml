@@ -1,5 +1,5 @@
 - timestamp: 2/2/2024 16:29:50
-  name: Akshay Pawar
+  name: Harshita
   position: Assistant Professor
   email: abc
   bio1: sryt
@@ -267,7 +267,7 @@
   year: ''
 - timestamp: 2/12/2024 13:09:31
   name: Mangesh Scott
-  position: MSc Student
+  position: MSc student
   email: sgf
   bio1: Modelling of the Dynamics of Foveation and Attention in Human Visual System
   bio2: ''
@@ -320,3 +320,88 @@
   alumni: 0
   alumni_current: ''
   year: '2023'
+- timestamp: 2/10/2024 7:34:47
+  name: Isabella Johnson
+  position: Assistant Professor
+  email: def
+  bio1: Navigational network in the brain
+  bio2: ''
+  bio3: ''
+  bio4: ''
+  image: >-
+    https://drive.google.com/thumbnail?id=1exiOviyOY1yccVTsSrNvQJWs5kN2RVuS&sz=w300
+  affiliation: ''
+  display: .nan
+  undefined: ''
+  acknowledgement: ''
+  alumni: .nan
+  alumni_current: ''
+  year: ''
+- timestamp: 2/10/2024 7:34:47
+  name: ' Ethan Williams'
+  position: PhD student
+  email: ghi
+  bio1: vee
+  bio2: ''
+  bio3: ''
+  bio4: ''
+  image: >-
+    https://drive.google.com/thumbnail?id=1MI8R_8TO-Hoo5y3k305AsZwWDuZ50CEr&sz=w300
+  affiliation: ''
+  display: .nan
+  undefined: ''
+  acknowledgement: ''
+  alumni: .nan
+  alumni_current: ''
+  year: ''
+- timestamp: 2/10/2024 7:34:47
+  name: ' Xavier Rodriguez'
+  position: Intern
+  email: jdk
+  bio1: Navigational network in the brain
+  bio2: ''
+  bio3: ''
+  bio4: ''
+  image: >-
+    https://drive.google.com/thumbnail?id=18XWPNihceVtI8JBrs42gwLeunGu5-w2f&sz=w300
+  affiliation: ''
+  display: .nan
+  undefined: ''
+  acknowledgement: ''
+  alumni: .nan
+  alumni_current: ''
+  year: ''
+- timestamp: 2/10/2024 7:34:47
+  name: Gabriel Thompson
+  position: Research Assistant
+  email: ahjdbj
+  bio1: wwef
+  bio2: ''
+  bio3: ''
+  bio4: ''
+  image: >-
+    https://drive.google.com/thumbnail?id=1bgGrzLcKAm3JRT_qrv-TdAOuSuxDNWoV&sz=w300
+  affiliation: ''
+  display: .nan
+  undefined: ''
+  acknowledgement: ''
+  alumni: .nan
+  alumni_current: ''
+  year: ''
+- timestamp: 2/10/2024 7:34:47
+  name: Olivia Garcia
+  position: Intern
+  email: hdb
+  bio1: wwef
+  bio2: ''
+  bio3: ''
+  bio4: ''
+  image: >-
+    https://drive.google.com/thumbnail?id=1D-3MdkThidQnSalXWOopjUNP787IOdYJ&sz=w300
+  affiliation: ''
+  display: .nan
+  undefined: ''
+  acknowledgement: ''
+  alumni: .nan
+  alumni_current: ''
+  year: ''
