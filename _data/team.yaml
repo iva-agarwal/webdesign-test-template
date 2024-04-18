@@ -16,7 +16,7 @@
   alumni_current: ''
   year: '2021'
 - timestamp: 2/9/2024 11:03:05
-  name: M. Sanket Rathod
+  name: Isabella Johnson
   position: MS(R) student
   email: xyz
   bio1: Mesoscale whole-brain network modeling, epilepsy, memory in mouse brains
@@ -330,13 +330,13 @@
   bio4: ''
   image: >-
     https://drive.google.com/thumbnail?id=1exiOviyOY1yccVTsSrNvQJWs5kN2RVuS&sz=w300
-  affiliation: ''
-  display: .nan
+  affiliation: Center for Brain Sciences and Applications (IIT-Jodhpur)
+  display: 1
   undefined: ''
-  acknowledgement: ''
-  alumni: .nan
+  acknowledgement: I understand and agree
+  alumni: 0
   alumni_current: ''
-  year: ''
+  year: '2023'
 - timestamp: 2/10/2024 7:34:47
   name: ' Ethan Williams'
   position: PhD student
@@ -347,13 +347,13 @@
   bio4: ''
   image: >-
     https://drive.google.com/thumbnail?id=1MI8R_8TO-Hoo5y3k305AsZwWDuZ50CEr&sz=w300
-  affiliation: ''
-  display: .nan
+  affiliation: BITS Pilani, Pilani Campus
+  display: 1
   undefined: ''
-  acknowledgement: ''
-  alumni: .nan
+  acknowledgement: I understand and agree
+  alumni: 0
   alumni_current: ''
-  year: ''
+  year: '2023'
 - timestamp: 2/10/2024 7:34:47
   name: ' Xavier Rodriguez'
   position: Intern
@@ -364,13 +364,13 @@
   bio4: ''
   image: >-
     https://drive.google.com/thumbnail?id=18XWPNihceVtI8JBrs42gwLeunGu5-w2f&sz=w300
-  affiliation: ''
-  display: .nan
+  affiliation: Electrical Engineering (IIT Delhi)
+  display: 1
   undefined: ''
-  acknowledgement: ''
-  alumni: .nan
+  acknowledgement: I understand and agree
+  alumni: 0
   alumni_current: ''
-  year: ''
+  year: '2023'
 - timestamp: 2/10/2024 7:34:47
   name: Gabriel Thompson
   position: Research Assistant
@@ -381,13 +381,13 @@
   bio4: ''
   image: >-
     https://drive.google.com/thumbnail?id=1bgGrzLcKAm3JRT_qrv-TdAOuSuxDNWoV&sz=w300
-  affiliation: ''
-  display: .nan
+  affiliation: Electrical Engineering (IIT Delhi)
+  display: 1
   undefined: ''
-  acknowledgement: ''
-  alumni: .nan
+  acknowledgement: I understand and agree
+  alumni: 0
   alumni_current: ''
-  year: ''
+  year: '2023'
 - timestamp: 2/10/2024 7:34:47
   name: Olivia Garcia
   position: Intern
@@ -398,10 +398,10 @@
   bio4: ''
   image: >-
     https://drive.google.com/thumbnail?id=1D-3MdkThidQnSalXWOopjUNP787IOdYJ&sz=w300
-  affiliation: ''
-  display: .nan
+  affiliation: Electrical Engineering (IIT Delhi)
+  display: 1
   undefined: ''
-  acknowledgement: ''
-  alumni: .nan
+  acknowledgement: I understand and agree
+  alumni: 0
   alumni_current: ''
-  year: ''
+  year: '2023'
